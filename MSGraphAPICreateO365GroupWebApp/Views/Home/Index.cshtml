@@ -1,3 +1,4 @@
+@using Microsoft.Graph.Models;
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,4 +9,10 @@
 </div>
 
 <div>Graph API result</div>
-<div>@ViewData["GraphApiResult"]</div>
+@{
+    List<Group> listGroup = ViewData["GraphApiResult"] as List<Group>;
+    foreach (Group group in listGroup)
+    {
+        <p>@group.DisplayName</p>
+    }
+}
