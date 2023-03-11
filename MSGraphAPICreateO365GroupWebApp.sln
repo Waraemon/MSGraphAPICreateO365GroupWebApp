@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGraphAPICreateO365GroupWebApp", "MSGraphAPICreateO365GroupWebApp\MSGraphAPICreateO365GroupWebApp.csproj", "{A6D2115D-A04D-4BA9-8A50-6A69C857E97E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6D2115D-A04D-4BA9-8A50-6A69C857E97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D2115D-A04D-4BA9-8A50-6A69C857E97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D2115D-A04D-4BA9-8A50-6A69C857E97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D2115D-A04D-4BA9-8A50-6A69C857E97E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15E9D44C-A51E-45BC-AC56-C3F52732E7DA}
+	EndGlobalSection
+EndGlobal
