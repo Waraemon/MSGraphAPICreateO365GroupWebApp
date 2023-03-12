@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "CreateO365Group";
+}
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Create O365 group</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Input Data</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">Settings 1</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="form-horizontal form-label-left" asp-controller="Home" asp-action="CreateO365Group" method="post" name="CreateO365Group" id="CreateO365Group">
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Name</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="groupName" id="groupName" class="form-control col-md-10" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Description</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="description" id="description" class="form-control col-md-10" required />
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Trở lại</button>
+                                <button type="submit" class="btn btn-success">Cập nhật</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
