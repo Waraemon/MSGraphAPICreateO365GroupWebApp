@@ -83,6 +83,7 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
             {
                 string displayName = collection["groupName"];
                 string description = collection["description"];
+                string[] resourceBehaviorOptions = collection["resourceBehaviorOptions"];
 
                 var group = new Group
                 {
@@ -104,11 +105,7 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
                             }
                         },
                         {
-                            "resourceBehaviorOptions" , new List<string>
-                            {
-                                "WelcomeEmailDisabled",
-                                "SubscribeNewGroupMembers",
-                            }
+                            "resourceBehaviorOptions" , new List<string>(resourceBehaviorOptions)
                         },
                     },
                 };

@@ -14,20 +14,6 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Input Data</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>
-                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="#">Settings 1</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -44,11 +30,48 @@
                                 <input type="text" name="description" id="description" class="form-control col-md-10" required />
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label>Resource Behavior Options:</label>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="AllowOnlyMembersToPost" id="AllowOnlyMembersToPostCheck" />
+                              <label class="form-check-label" for="AllowOnlyMembersToPostCheck">AllowOnlyMembersToPost</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="CalendarMemberReadOnly" id="CalendarMemberReadOnlyCheck" />
+                              <label class="form-check-label" for="CalendarMemberReadOnlyCheck">CalendarMemberReadOnly</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="ConnectorsDisabled" id="ConnectorsDisabledCheck" />
+                              <label class="form-check-label" for="ConnectorsDisabledCheck">ConnectorsDisabled</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="HideGroupInOutlook" id="HideGroupInOutlookCheck" />
+                              <label class="form-check-label" for="HideGroupInOutlookCheck">HideGroupInOutlook</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="SubscribeMembersToCalendarEventsDisabled" id="SubscribeMembersToCalendarEventsDisabledCheck" />
+                                <label class="form-check-label" for="SubscribeMembersToCalendarEventsDisabledCheck">SubscribeMembersToCalendarEventsDisabled</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="SubscribeNewGroupMembers" id="SubscribeNewGroupMembersCheck" />
+                                <label class="form-check-label" for="SubscribeNewGroupMembersCheck">SubscribeNewGroupMembers</label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="WelcomeEmailDisabled" id="WelcomeEmailDisabledCheck" />
+                                <label class="form-check-label" for="WelcomeEmailDisabledCheck">WelcomeEmailDisabled</label>
+                            </div>
+                        </div>
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Trở lại</button>
-                                <button type="submit" class="btn btn-success">Cập nhật</button>
+                                <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Back</button>
+                                <button type="submit" class="btn btn-success">Create</button>
                             </div>
                         </div>
                     </form>
