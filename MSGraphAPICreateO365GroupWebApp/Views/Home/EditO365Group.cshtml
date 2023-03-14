@@ -3,7 +3,7 @@
     ViewData["Title"] = "EditO365Group";
 }
 
-<form class="form-horizontal form-label-left" action="/O365/EditO365Group" method="post" name="editO365Group" id="editO365Group">
+<form class="form-horizontal form-label-left" action="/Home/EditO365Group" method="post" name="editO365Group" id="editO365Group">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="">
             <div class="page-title">
@@ -12,8 +12,10 @@
                 </div>
             </div>
             <div class="clearfix"></div>
+            
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
+                    <br />
                     <div class="x_title">
                         <h2>Group Properties</h2>
                         <ul class="nav navbar-right panel_toolbox">
@@ -50,9 +52,10 @@
                             </div>
                         </div>
                     </div>
+                    <br />
                     <div class="x_title">
                         <h2>
-                            Danh sách các user trong group
+                            List members in group
                         </h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li>
@@ -63,7 +66,7 @@
                     </div>
                     <div class="x_content">
                         @{
-                            if (ViewBag.members.Count <= 0)
+                            if (ViewBag.memberscount == "0")
                             {
                                 <h1>No user in this group.</h1>
                             }
@@ -110,8 +113,8 @@
                     <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                             <input type="hidden" id="id" name="id" value="@Model.Id">
-                            <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Trở lại</button>
-                            <button type="submit" class="btn btn-success">Cập nhật</button>
+                            <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Back</button>
+                            <button type="submit" class="btn btn-success">Update</button>
                         </div>
                     </div>
                 </div>

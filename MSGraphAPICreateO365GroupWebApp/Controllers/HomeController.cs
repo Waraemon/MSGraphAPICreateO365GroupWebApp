@@ -142,7 +142,12 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
                 var groupInfo = await groupInfoTask;
                 var members = await getMembersTask;
 
-                ViewBag.members = members;
+                if (members != null)
+                {
+                    ViewBag.memberscount = members.OdataCount;
+                    ViewBag.members = members.Value;
+                }
+                
                 return View(groupInfo);
             }
             catch (Exception ex)
@@ -172,7 +177,7 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
                 await _graphClient.Groups[collection["id"]]
                     .PatchAsync(group);
                 
-                return RedirectToAction("ListO365Groups");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -210,25 +215,7 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
                 await _graphClient.Groups[groupId]
                     .DeleteAsync();
                 
-                return RedirectToAction("ListO365Groups");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex?.Message);
-                return RedirectToAction("Error", "Home");
-            }
-        }
-
-        public async Task<ActionResult> GroupDetail(string id)
-        {
-            try
-            {
-                if (id == null)
-                {
-                    return new StatusCodeResult(404);
-                }
-                var members = await _graphClient.Groups[id].Members.GetAsync();
-                return View(members);
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -251,26 +238,6 @@ namespace MSGraphAPICreateO365GroupWebApp.Controllers
                 return RedirectToAction("Error", "Home");
             }
         }
-
-        //[HttpPost]
-        //public async Task<JsonResult> GetMemberOf_Json(string tenacc)
-        //{
-        //    try
-        //    {
-        //        tenacc = tenacc.Trim();
-        //        tenacc = tenacc.ToLower();
-
-        //        string userPrincipalName = tenacc + '@' + O365Connection.Instant.O365Domain;
-        //        var listGroup = await _graphClient.Users[userPrincipalName].MemberOf.GetAsync();
-        //        var result = Json(listGroup, Microsoft.AspNetCore.Mvc.);
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //        throw;
-        //    }
-        //}
         #endregion
 
         #region user and group

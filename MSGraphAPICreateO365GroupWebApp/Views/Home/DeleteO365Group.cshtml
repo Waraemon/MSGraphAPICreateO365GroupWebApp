@@ -15,23 +15,10 @@
             <div class="x_panel">
                 <div class="x_title">
                     <h2>Group Info</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>
-                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="#">Settings 1</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                    <form class="form-horizontal form-label-left" action="/O365/DeleteO365Group" method="post" name="deleteO365Group" id="deleteO365Group">
+                    <form class="form-horizontal form-label-left" action="/Home/DeleteO365Group" method="post" name="deleteO365Group" id="deleteO365Group">
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Display Name</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -68,8 +55,8 @@
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 <input type="hidden" id="id" name="id" value="@Model.Id">
-                                <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Trở lại</button>
-                                <button type="submit" class="btn btn-success">Cập nhật</button>
+                                <button type="button" class="btn btn-primary" onclick="window.history.go(-1); return false;">Back</button>
+                                <button type="submit" class="btn btn-success">Delete</button>
                             </div>
                         </div>
                     </form>
