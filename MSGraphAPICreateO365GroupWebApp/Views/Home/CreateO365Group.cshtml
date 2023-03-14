@@ -19,19 +19,22 @@
                 <div class="x_content">
                     <form class="form-horizontal form-label-left" asp-controller="Home" asp-action="CreateO365Group" method="post" name="CreateO365Group" id="CreateO365Group">
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Name</label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Name:</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="groupName" id="groupName" class="form-control col-md-10" required />
                             </div>
                         </div>
+                        <br>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Description</label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Group Description:</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="description" id="description" class="form-control col-md-10" required />
                             </div>
                         </div>
+                        <br>
                         <div class="form-group">
-                            <label>Resource Behavior Options:</label>
+                            <label class="control-label">Resource Behavior Options:</label>
+                            <br>
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" name="resourceBehaviorOptions" value="AllowOnlyMembersToPost" id="AllowOnlyMembersToPostCheck" />
                               <label class="form-check-label" for="AllowOnlyMembersToPostCheck">AllowOnlyMembersToPost</label>
